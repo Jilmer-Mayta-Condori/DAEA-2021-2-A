@@ -19,30 +19,74 @@ namespace prjLab01_1
         {
             return a + b;
         }
+
+        static int Resta(int a, int b)
+        {
+            return a - b;
+        }
+
+        static double Division(int a, int b)
+        {
+            return a / b;
+        }
+
+        static int Multiplicacion(int a, int b)
+        {
+            return a * b;
+        }
+
         static void Main(string[] args)
         {
             Console.Title = "Procedimientos y funciones";
             String opcion;
+            int a,b;
             
             do
             {
                 Console.Clear();
                 Console.WriteLine("[1] SUMA DE DOS NUMEROS");
-                Console.WriteLine("[2] IMPRIMIR LA RAIZ CUADRADA DE LOS PRIMEROS NUMEROS ENTEROS");
+                Console.WriteLine("[2] RESTA DE DOS NUMEROS");
+                Console.WriteLine("[3] MULTIPLICACION DE DOS NUMEROS");
+                Console.WriteLine("[4] DIVISION DE DOS NUMEROS");
+                Console.WriteLine("[5] IMPRIMIR LA RAIZ CUADRADA DE LOS PRIMEROS NUMEROS ENTEROS");
                 Console.WriteLine("[0] SALIR");
                 Console.WriteLine("ingrese una opcion y presione ENTER");
                 opcion = Console.ReadLine();
                 switch (opcion)
                 {
                     case "1":
-                        Console.WriteLine("Ingrese el primer numero");
-                        int a = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Ingrese el primer valor");
+                        a = Convert.ToInt32(Console.ReadLine());
                         Console.WriteLine("Ingrese el segundo valor");
-                        int b = Convert.ToInt32(Console.ReadLine());
+                        b = Convert.ToInt32(Console.ReadLine());
                         Console.WriteLine("La suma de {0} y {1} es {2}", a, b, Suma(a,b));
                         Console.ReadKey();
                         break;
                     case "2":
+                        Console.WriteLine("Ingrese el primer valor");
+                        a = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Ingrese el segundo valor");
+                        b = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("La suma de {0} y {1} es {2}", a, b, Resta(a,b));
+                        Console.ReadKey();
+                        break;
+                    case "3":
+                        Console.WriteLine("Ingrese el primer valor");
+                        a = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Ingrese el segundo valor");
+                        b = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("La suma de {0} y {1} es {2}", a, b, Multiplicacion(a,b));
+                        Console.ReadKey();
+                        break;
+                    case "4":
+                        Console.WriteLine("Ingrese el primer valor");
+                        a = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Ingrese el segundo valor");
+                        b = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("La suma de {0} y {1} es {2}", a, b, Division(a,b));
+                        Console.ReadKey();
+                        break;
+                    case "5":
                         Console.WriteLine("Calculando....");
                         Raiz();
                         Console.ReadKey();
