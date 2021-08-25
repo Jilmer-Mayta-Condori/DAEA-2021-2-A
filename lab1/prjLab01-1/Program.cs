@@ -35,6 +35,21 @@ namespace prjLab01_1
             return a * b;
         }
 
+        static double ConversorTemperatura (int temperatura, int conversion)
+        {
+            double valorconvertivo;
+            if ( conversion == 1)
+            {
+                valorconvertivo = ((5*(temperatura-32))/9);
+                return valorconvertivo;
+            }
+            else
+            {
+                valorconvertivo = (((9*temperatura)/5)+32);
+                return valorconvertivo;
+            }
+        }
+
         static void NumerosPrimos()
         {
             Console.WriteLine("Los 10 primeros numero primos son: ");
@@ -81,6 +96,7 @@ namespace prjLab01_1
                 Console.WriteLine("[4] DIVISION DE DOS NUMEROS");
                 Console.WriteLine("[5] IMPRIMIR LA RAIZ CUADRADA DE LOS PRIMEROS NUMEROS ENTEROS");
                 Console.WriteLine("[6] IMPRIMIR LOS 10 PRIMEROS NUMEROS PRIMOS");
+                Console.WriteLine("[6] CONVERSOR DE TEMPERATURA");
                 Console.WriteLine("[0] SALIR");
                 Console.WriteLine("ingrese una opcion y presione ENTER");
                 opcion = Console.ReadLine();
@@ -125,6 +141,24 @@ namespace prjLab01_1
                         break;
                     case "6":
                         NumerosPrimos();
+                        Console.ReadKey();
+                        break;
+                    case "7":
+                        Console.WriteLine("Ingrese el valor de temperatura");
+                        a = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("El valor ingresado desea convertirlo a:");
+                        Console.WriteLine("[1] Centígrados");
+                        Console.WriteLine("[2] Fahrenheit");
+                        Console.WriteLine("Ingresa una opcion y presiona ENTER");
+                        b = Convert.ToInt32(Console.ReadLine());
+                        if (b == 2)
+                        {
+                            Console.WriteLine("La conversion de {0} grados centigrados es {1} grados fahrenheit", a, ConversorTemperatura(a,b));
+                        }
+                        else
+                        {
+                            Console.WriteLine("La conversion de {0} grados fahrenheit es {1} grados centigrados", a, ConversorTemperatura(a,b));
+                        }
                         Console.ReadKey();
                         break;
                 }
