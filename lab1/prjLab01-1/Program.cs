@@ -35,6 +35,37 @@ namespace prjLab01_1
             return a * b;
         }
 
+        static void NumerosPrimos()
+        {
+            Console.WriteLine("Los 10 primeros numero primos son: ");
+            int contador = 0;
+            int numero = 2;
+            while (true)
+            {
+                if ( contador == 10)
+                {
+                    break;
+                }
+                else
+                {
+                    int contadorprimos = 0;
+                    for (int x = 1; x <= numero ; x++)
+                    {
+                        if ( numero % x == 0)
+                        {
+                            contadorprimos++;
+                        }
+                    }
+                    if (contadorprimos == 2)
+                    {
+                        Console.WriteLine(numero);
+                        contador++;
+                    }
+                    numero++;
+                }
+            }
+        }
+
         static void Main(string[] args)
         {
             Console.Title = "Procedimientos y funciones";
@@ -49,6 +80,7 @@ namespace prjLab01_1
                 Console.WriteLine("[3] MULTIPLICACION DE DOS NUMEROS");
                 Console.WriteLine("[4] DIVISION DE DOS NUMEROS");
                 Console.WriteLine("[5] IMPRIMIR LA RAIZ CUADRADA DE LOS PRIMEROS NUMEROS ENTEROS");
+                Console.WriteLine("[6] IMPRIMIR LOS 10 PRIMEROS NUMEROS PRIMOS");
                 Console.WriteLine("[0] SALIR");
                 Console.WriteLine("ingrese una opcion y presione ENTER");
                 opcion = Console.ReadLine();
@@ -89,6 +121,10 @@ namespace prjLab01_1
                     case "5":
                         Console.WriteLine("Calculando....");
                         Raiz();
+                        Console.ReadKey();
+                        break;
+                    case "6":
+                        NumerosPrimos();
                         Console.ReadKey();
                         break;
                 }
