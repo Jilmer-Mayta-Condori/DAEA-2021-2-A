@@ -58,6 +58,30 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManCategorias.Designer.cs">
+      <DependentUpon>ManCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManClientes.Designer.cs">
+      <DependentUpon>ManClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManProductos.Designer.cs">
+      <DependentUpon>ManProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManProveedores.Designer.cs">
+      <DependentUpon>ManProveedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,13 +94,67 @@
     <Compile Include="PrincipalMDI.Designer.cs">
       <DependentUpon>PrincipalMDI.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProcesoCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProcesoCompras.Designer.cs">
+      <DependentUpon>ProcesoCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProcesoVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProcesoVentas.Designer.cs">
+      <DependentUpon>ProcesoVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReporteClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteClientes.Designer.cs">
+      <DependentUpon>ReporteClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteCompras.Designer.cs">
+      <DependentUpon>ReporteCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteInventario.Designer.cs">
+      <DependentUpon>ReporteInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteProveedores.Designer.cs">
+      <DependentUpon>ReporteProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteUsuarios.Designer.cs">
+      <DependentUpon>ReporteUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteVentas.Designer.cs">
+      <DependentUpon>ReporteVentas.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="EjemploMDI.resx">
       <DependentUpon>EjemploMDI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManCategorias.resx">
+      <DependentUpon>ManCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManProductos.resx">
+      <DependentUpon>ManProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManUsuario.resx">
       <DependentUpon>ManUsuario.cs</DependentUpon>
