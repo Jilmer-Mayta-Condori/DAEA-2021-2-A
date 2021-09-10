@@ -11,33 +11,27 @@ using System.Data.SqlClient;
 
 namespace Lab03
 {
-    public partial class Personas : Form
+    public partial class Cursos : Form
     {
         SqlConnection conn;
-
-        public Personas(SqlConnection conn)
+        public Cursos(SqlConnection conn)
         {
             this.conn = conn;
             InitializeComponent();
         }
 
-        private void Personas_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnListar_Click(object sender, EventArgs e)
         {
-            if(conn.State == ConnectionState.Open)
+            if (conn.State == ConnectionState.Open)
             {
-                String sql = "select * from Person";
+                String sql = "select * from Course";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 DataTable dt = new DataTable();
                 dt.Load(reader);
-                dgvListado.DataSource = dt;
-                dgvListado.Refresh();
+                dgvListarCursos.DataSource = dt;
+                dgvListarCursos.Refresh();
 
             }
             else
@@ -46,19 +40,19 @@ namespace Lab03
             }
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+        private void btnCurso_Click(object sender, EventArgs e)
         {
             if (conn.State == ConnectionState.Open)
             {
-                String FirstName = txtNombre.Text;
+                String FirstName = txtCurso.Text;
 
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = "BuscarPersonaNombre";
+                cmd.CommandText = "BuscarCourseTitle";
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Connection = conn;
 
                 SqlParameter param = new SqlParameter();
-                param.ParameterName = "@FirstName";
+                param.ParameterName = "@Title";
                 param.SqlDbType = SqlDbType.NVarChar;
                 param.Value = FirstName;
 
@@ -67,8 +61,8 @@ namespace Lab03
                 SqlDataReader reader = cmd.ExecuteReader();
                 DataTable dt = new DataTable();
                 dt.Load(reader);
-                dgvListado.DataSource = dt;
-                dgvListado.Refresh();
+                dgvListarCursos.DataSource = dt;
+                dgvListarCursos.Refresh();
 
             }
             else

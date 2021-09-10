@@ -42,6 +42,7 @@ namespace Lab03
             this.btnDesconectar = new System.Windows.Forms.Button();
             this.btnEstado = new System.Windows.Forms.Button();
             this.btnPersona = new System.Windows.Forms.Button();
+            this.btnCursos = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -82,6 +83,7 @@ namespace Lab03
             // 
             // txtServidor
             // 
+            this.txtServidor.Enabled = false;
             this.txtServidor.Location = new System.Drawing.Point(27, 54);
             this.txtServidor.Name = "txtServidor";
             this.txtServidor.Size = new System.Drawing.Size(175, 20);
@@ -94,7 +96,7 @@ namespace Lab03
             this.txtBaseDatos.Name = "txtBaseDatos";
             this.txtBaseDatos.Size = new System.Drawing.Size(175, 20);
             this.txtBaseDatos.TabIndex = 6;
-            this.txtBaseDatos.Text = "db_lab03";
+            this.txtBaseDatos.Text = "School";
             // 
             // txtUsuario
             // 
@@ -159,7 +161,7 @@ namespace Lab03
             // 
             // btnPersona
             // 
-            this.btnPersona.Location = new System.Drawing.Point(189, 235);
+            this.btnPersona.Location = new System.Drawing.Point(140, 234);
             this.btnPersona.Name = "btnPersona";
             this.btnPersona.Size = new System.Drawing.Size(75, 23);
             this.btnPersona.TabIndex = 13;
@@ -167,11 +169,22 @@ namespace Lab03
             this.btnPersona.UseVisualStyleBackColor = true;
             this.btnPersona.Click += new System.EventHandler(this.btnPersona_Click);
             // 
+            // btnCursos
+            // 
+            this.btnCursos.Location = new System.Drawing.Point(243, 234);
+            this.btnCursos.Name = "btnCursos";
+            this.btnCursos.Size = new System.Drawing.Size(75, 23);
+            this.btnCursos.TabIndex = 14;
+            this.btnCursos.Text = "Cursos";
+            this.btnCursos.UseVisualStyleBackColor = true;
+            this.btnCursos.Click += new System.EventHandler(this.btnCursos_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(467, 269);
+            this.Controls.Add(this.btnCursos);
             this.Controls.Add(this.btnPersona);
             this.Controls.Add(this.btnEstado);
             this.Controls.Add(this.btnDesconectar);
@@ -209,6 +222,7 @@ namespace Lab03
         private System.Windows.Forms.Button btnDesconectar;
         private System.Windows.Forms.Button btnEstado;
         private System.Windows.Forms.Button btnPersona;
+        private System.Windows.Forms.Button btnCursos;
     }
 }
 
