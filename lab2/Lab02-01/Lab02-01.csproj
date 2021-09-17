@@ -46,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EjemploMDI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EjemploMDI.Designer.cs">
-      <DependentUpon>EjemploMDI.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,23 +138,32 @@
     <Compile Include="ReporteVentas.Designer.cs">
       <DependentUpon>ReporteVentas.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="EjemploMDI.resx">
-      <DependentUpon>EjemploMDI.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManCategorias.resx">
       <DependentUpon>ManCategorias.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManClientes.resx">
+      <DependentUpon>ManClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManProductos.resx">
       <DependentUpon>ManProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManProveedores.resx">
+      <DependentUpon>ManProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManUsuario.resx">
       <DependentUpon>ManUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrincipalMDI.resx">
       <DependentUpon>PrincipalMDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProcesoCompras.resx">
+      <DependentUpon>ProcesoCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProcesoVentas.resx">
+      <DependentUpon>ProcesoVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -171,6 +174,24 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReporteClientes.resx">
+      <DependentUpon>ReporteClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteCompras.resx">
+      <DependentUpon>ReporteCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteInventario.resx">
+      <DependentUpon>ReporteInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteProveedores.resx">
+      <DependentUpon>ReporteProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteUsuarios.resx">
+      <DependentUpon>ReporteUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteVentas.resx">
+      <DependentUpon>ReporteVentas.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
