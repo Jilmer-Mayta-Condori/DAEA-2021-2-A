@@ -37,6 +37,8 @@ namespace Lab03
 
             String str = "Server=" + servidor + ";DataBase=" + bd + ";";
 
+            
+
             //La cadena de conexion cambia en funcion del checkbox
             if (chkAutenticacion.Checked)
             {
@@ -47,6 +49,7 @@ namespace Lab03
                 str += "User Id=" + user + ";Password=" + pwd + ";";
             }
 
+            Console.WriteLine(str);
             //Abir una conexion xon el servidor, usando la cadena de conexión
             try
             {
