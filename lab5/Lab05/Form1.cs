@@ -54,6 +54,7 @@ namespace Lab05
             dt.Load(reader);
 
             dgvListado.DataSource = dt;
+            con.Close();
         }
 
         private void btnInsertar_Click(object sender, EventArgs e)
@@ -95,6 +96,32 @@ namespace Lab05
         private void dgvListado_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            String FirstName = txtFirstName.Text;
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "BuscarPersonaNombre";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = con;
+
+            SqlParameter param = new SqlParameter();
+            param.ParameterName = "@FirstName";
+            param.SqlDbType = SqlDbType.NVarChar;
+            param.Value = FirstName;
+
+            cmd.Parameters.Add(param);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(reader);
+            dgvListado.DataSource = dt;
+            dgvListado.Refresh();
+
+            con.Close();
         }
     }
 }
