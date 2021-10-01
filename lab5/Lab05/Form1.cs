@@ -65,8 +65,8 @@ namespace Lab05
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@FirstName", txtFirstName.Text);
             cmd.Parameters.AddWithValue("@LastName", txtLastName.Text);
-            cmd.Parameters.AddWithValue("@HireDate", txtHireDate.Text);
-            cmd.Parameters.AddWithValue("@EnrollmentDate", txtEnrollmentDate.Text);
+            cmd.Parameters.AddWithValue("@HireDate", Convert.ToDateTime(txtHireDate.Text));
+            cmd.Parameters.AddWithValue("@EnrollmentDate", Convert.ToDateTime(txtEnrollmentDate.Text));
 
             int codigo = Convert.ToInt32(cmd.ExecuteScalar());
             MessageBox.Show("Se ha registrado una nueva persona con el codigo " + codigo);
@@ -122,6 +122,19 @@ namespace Lab05
             dgvListado.Refresh();
 
             con.Close();
+        }
+
+        private void dgvListado_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvListado.SelectedRows.Count > 0)
+            {
+                txtPersonID.Text = dgvListado.SelectedRows[0].Cells[0].Value.ToString();
+                txtFirstName.Text = dgvListado.SelectedRows[0].Cells[1].Value.ToString();
+                txtLastName.Text = dgvListado.SelectedRows[0].Cells[2].Value.ToString();
+                txtHireDate.Text = dgvListado.SelectedRows[0].Cells[3].Value.ToString();
+                txtEnrollmentDate.Text = dgvListado.SelectedRows[0].Cells[4].Value.ToString();
+            }
+            
         }
     }
 }

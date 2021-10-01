@@ -73,6 +73,7 @@ namespace Lab05
             // 
             this.txtEnrollmentDate.AccessibleRole = System.Windows.Forms.AccessibleRole.Alert;
             this.txtEnrollmentDate.CalendarForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtEnrollmentDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.txtEnrollmentDate.ImeMode = System.Windows.Forms.ImeMode.Katakana;
             this.txtEnrollmentDate.Location = new System.Drawing.Point(179, 185);
             this.txtEnrollmentDate.Name = "txtEnrollmentDate";
@@ -83,6 +84,7 @@ namespace Lab05
             // 
             this.txtHireDate.AccessibleRole = System.Windows.Forms.AccessibleRole.Alert;
             this.txtHireDate.CalendarForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtHireDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.txtHireDate.ImeMode = System.Windows.Forms.ImeMode.Katakana;
             this.txtHireDate.Location = new System.Drawing.Point(22, 185);
             this.txtHireDate.Name = "txtHireDate";
@@ -225,6 +227,7 @@ namespace Lab05
             this.dgvListado.Size = new System.Drawing.Size(453, 188);
             this.dgvListado.TabIndex = 18;
             this.dgvListado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListado_CellContentClick);
+            this.dgvListado.SelectionChanged += new System.EventHandler(this.dgvListado_SelectionChanged);
             // 
             // Form1
             // 
