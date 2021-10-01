@@ -26,6 +26,10 @@ namespace Lab06
             String str = "Server=DESKTOP-6TPRNVU\\LOCAL;DataBase=School;Integrated Security=true";
             con = new SqlConnection(str);
             txtPersonID.Enabled = false;
+            btnSearchContrato.Enabled = false;
+            btnSearchFacturacion.Enabled = false;
+            btnSearchLastname.Enabled = false;
+            btnSearchNombre.Enabled = false;
         }
 
         private void btnListar_Click(object sender, EventArgs e)
@@ -146,6 +150,68 @@ namespace Lab06
                 else
                     txtEnrollmentDate.Text = EnrollmentDate;
             }
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearchNombre_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearchLastname_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearchContrato_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearchFacturacion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSearchName_TextChanged(object sender, EventArgs e)
+        {
+            btnSearchContrato.Enabled = false;
+            btnSearchFacturacion.Enabled = false;
+            btnSearchLastname.Enabled = false;
+            btnSearchNombre.Enabled = true;
+        }
+
+        private void txtSearchLastName_TextChanged(object sender, EventArgs e)
+        {
+            btnSearchLastname.Enabled = true;
+            btnSearchContrato.Enabled = false;
+            btnSearchFacturacion.Enabled = false;
+            btnSearchNombre.Enabled = false;
+        }
+
+        private void dtpSearchDateContrato_ValueChanged(object sender, EventArgs e)
+        {
+            btnSearchContrato.Enabled = true;
+            btnSearchNombre.Enabled = false;
+            btnSearchFacturacion.Enabled = false;
+            btnSearchLastname.Enabled = false;
+        }
+
+        private void dtpSearchDateInscripcion_ValueChanged(object sender, EventArgs e)
+        {
+            btnSearchFacturacion.Enabled = true;
+            btnSearchContrato.Enabled = false;
+            btnSearchNombre.Enabled = false;
+            btnSearchLastname.Enabled = false;
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
 
         }
     }

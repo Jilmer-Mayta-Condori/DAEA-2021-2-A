@@ -37,6 +37,8 @@ namespace Lab06
             this.btnListar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtEnrollmentDate = new System.Windows.Forms.DateTimePicker();
+            this.txtHireDate = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtLastName = new System.Windows.Forms.TextBox();
@@ -47,10 +49,22 @@ namespace Lab06
             this.label1 = new System.Windows.Forms.Label();
             this.btnOrdenApellido = new System.Windows.Forms.Button();
             this.btnBuscarXCodigo = new System.Windows.Forms.Button();
-            this.txtEnrollmentDate = new System.Windows.Forms.DateTimePicker();
-            this.txtHireDate = new System.Windows.Forms.DateTimePicker();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dtpSearchDateContrato = new System.Windows.Forms.DateTimePicker();
+            this.dtpSearchDateInscripcion = new System.Windows.Forms.DateTimePicker();
+            this.btnSearchFacturacion = new System.Windows.Forms.Button();
+            this.btnSearchContrato = new System.Windows.Forms.Button();
+            this.btnSearchLastname = new System.Windows.Forms.Button();
+            this.btnSearchNombre = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtSearchLastName = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtSearchName = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvListado
@@ -61,7 +75,7 @@ namespace Lab06
             this.dgvListado.Name = "dgvListado";
             this.dgvListado.RowHeadersVisible = false;
             this.dgvListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListado.Size = new System.Drawing.Size(453, 188);
+            this.dgvListado.Size = new System.Drawing.Size(670, 188);
             this.dgvListado.TabIndex = 26;
             this.dgvListado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListado_CellContentClick);
             this.dgvListado.SelectionChanged += new System.EventHandler(this.dgvListado_SelectionChanged);
@@ -104,6 +118,7 @@ namespace Lab06
             this.btnBuscar.TabIndex = 22;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnListar
             // 
@@ -141,6 +156,30 @@ namespace Lab06
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(340, 219);
             this.panel1.TabIndex = 19;
+            // 
+            // txtEnrollmentDate
+            // 
+            this.txtEnrollmentDate.AccessibleRole = System.Windows.Forms.AccessibleRole.Alert;
+            this.txtEnrollmentDate.CalendarForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtEnrollmentDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.txtEnrollmentDate.ImeMode = System.Windows.Forms.ImeMode.Katakana;
+            this.txtEnrollmentDate.Location = new System.Drawing.Point(179, 185);
+            this.txtEnrollmentDate.Name = "txtEnrollmentDate";
+            this.txtEnrollmentDate.ShowCheckBox = true;
+            this.txtEnrollmentDate.Size = new System.Drawing.Size(129, 20);
+            this.txtEnrollmentDate.TabIndex = 11;
+            // 
+            // txtHireDate
+            // 
+            this.txtHireDate.AccessibleRole = System.Windows.Forms.AccessibleRole.Alert;
+            this.txtHireDate.CalendarForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtHireDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.txtHireDate.ImeMode = System.Windows.Forms.ImeMode.Katakana;
+            this.txtHireDate.Location = new System.Drawing.Point(22, 185);
+            this.txtHireDate.Name = "txtHireDate";
+            this.txtHireDate.ShowCheckBox = true;
+            this.txtHireDate.Size = new System.Drawing.Size(127, 20);
+            this.txtHireDate.TabIndex = 10;
             // 
             // label5
             // 
@@ -228,35 +267,149 @@ namespace Lab06
             this.btnBuscarXCodigo.UseVisualStyleBackColor = true;
             this.btnBuscarXCodigo.Click += new System.EventHandler(this.btnBuscarXCodigo_Click);
             // 
-            // txtEnrollmentDate
+            // panel2
             // 
-            this.txtEnrollmentDate.AccessibleRole = System.Windows.Forms.AccessibleRole.Alert;
-            this.txtEnrollmentDate.CalendarForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtEnrollmentDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.txtEnrollmentDate.ImeMode = System.Windows.Forms.ImeMode.Katakana;
-            this.txtEnrollmentDate.Location = new System.Drawing.Point(179, 185);
-            this.txtEnrollmentDate.Name = "txtEnrollmentDate";
-            this.txtEnrollmentDate.ShowCheckBox = true;
-            this.txtEnrollmentDate.Size = new System.Drawing.Size(129, 20);
-            this.txtEnrollmentDate.TabIndex = 11;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.dtpSearchDateContrato);
+            this.panel2.Controls.Add(this.dtpSearchDateInscripcion);
+            this.panel2.Controls.Add(this.btnSearchFacturacion);
+            this.panel2.Controls.Add(this.btnSearchContrato);
+            this.panel2.Controls.Add(this.btnSearchLastname);
+            this.panel2.Controls.Add(this.btnSearchNombre);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.txtSearchLastName);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.txtSearchName);
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Location = new System.Drawing.Point(471, 12);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(211, 219);
+            this.panel2.TabIndex = 20;
             // 
-            // txtHireDate
+            // dtpSearchDateContrato
             // 
-            this.txtHireDate.AccessibleRole = System.Windows.Forms.AccessibleRole.Alert;
-            this.txtHireDate.CalendarForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtHireDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.txtHireDate.ImeMode = System.Windows.Forms.ImeMode.Katakana;
-            this.txtHireDate.Location = new System.Drawing.Point(22, 185);
-            this.txtHireDate.Name = "txtHireDate";
-            this.txtHireDate.ShowCheckBox = true;
-            this.txtHireDate.Size = new System.Drawing.Size(127, 20);
-            this.txtHireDate.TabIndex = 10;
+            this.dtpSearchDateContrato.AccessibleRole = System.Windows.Forms.AccessibleRole.Alert;
+            this.dtpSearchDateContrato.CalendarForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dtpSearchDateContrato.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpSearchDateContrato.ImeMode = System.Windows.Forms.ImeMode.Katakana;
+            this.dtpSearchDateContrato.Location = new System.Drawing.Point(15, 137);
+            this.dtpSearchDateContrato.Name = "dtpSearchDateContrato";
+            this.dtpSearchDateContrato.Size = new System.Drawing.Size(79, 20);
+            this.dtpSearchDateContrato.TabIndex = 33;
+            this.dtpSearchDateContrato.ValueChanged += new System.EventHandler(this.dtpSearchDateContrato_ValueChanged);
+            // 
+            // dtpSearchDateInscripcion
+            // 
+            this.dtpSearchDateInscripcion.AccessibleRole = System.Windows.Forms.AccessibleRole.Alert;
+            this.dtpSearchDateInscripcion.CalendarForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dtpSearchDateInscripcion.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpSearchDateInscripcion.ImeMode = System.Windows.Forms.ImeMode.Katakana;
+            this.dtpSearchDateInscripcion.Location = new System.Drawing.Point(15, 185);
+            this.dtpSearchDateInscripcion.Name = "dtpSearchDateInscripcion";
+            this.dtpSearchDateInscripcion.Size = new System.Drawing.Size(79, 20);
+            this.dtpSearchDateInscripcion.TabIndex = 12;
+            this.dtpSearchDateInscripcion.ValueChanged += new System.EventHandler(this.dtpSearchDateInscripcion_ValueChanged);
+            // 
+            // btnSearchFacturacion
+            // 
+            this.btnSearchFacturacion.Location = new System.Drawing.Point(116, 171);
+            this.btnSearchFacturacion.Name = "btnSearchFacturacion";
+            this.btnSearchFacturacion.Size = new System.Drawing.Size(90, 34);
+            this.btnSearchFacturacion.TabIndex = 32;
+            this.btnSearchFacturacion.Text = "Buscar x Fecha Inscripcion";
+            this.btnSearchFacturacion.UseVisualStyleBackColor = true;
+            this.btnSearchFacturacion.Click += new System.EventHandler(this.btnSearchFacturacion_Click);
+            // 
+            // btnSearchContrato
+            // 
+            this.btnSearchContrato.Location = new System.Drawing.Point(116, 123);
+            this.btnSearchContrato.Name = "btnSearchContrato";
+            this.btnSearchContrato.Size = new System.Drawing.Size(90, 34);
+            this.btnSearchContrato.TabIndex = 31;
+            this.btnSearchContrato.Text = "Buscar x Fecha Contrato";
+            this.btnSearchContrato.UseVisualStyleBackColor = true;
+            this.btnSearchContrato.Click += new System.EventHandler(this.btnSearchContrato_Click);
+            // 
+            // btnSearchLastname
+            // 
+            this.btnSearchLastname.Location = new System.Drawing.Point(116, 70);
+            this.btnSearchLastname.Name = "btnSearchLastname";
+            this.btnSearchLastname.Size = new System.Drawing.Size(90, 34);
+            this.btnSearchLastname.TabIndex = 30;
+            this.btnSearchLastname.Text = "Buscar Apellido";
+            this.btnSearchLastname.UseVisualStyleBackColor = true;
+            this.btnSearchLastname.Click += new System.EventHandler(this.btnSearchLastname_Click);
+            // 
+            // btnSearchNombre
+            // 
+            this.btnSearchNombre.Location = new System.Drawing.Point(116, 20);
+            this.btnSearchNombre.Name = "btnSearchNombre";
+            this.btnSearchNombre.Size = new System.Drawing.Size(90, 34);
+            this.btnSearchNombre.TabIndex = 29;
+            this.btnSearchNombre.Text = "Buscar por Nombre";
+            this.btnSearchNombre.UseVisualStyleBackColor = true;
+            this.btnSearchNombre.Click += new System.EventHandler(this.btnSearchNombre_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(12, 166);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(58, 13);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Inscripcion";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 113);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(47, 13);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Contrato";
+            // 
+            // txtSearchLastName
+            // 
+            this.txtSearchLastName.Location = new System.Drawing.Point(15, 84);
+            this.txtSearchLastName.Name = "txtSearchLastName";
+            this.txtSearchLastName.Size = new System.Drawing.Size(79, 20);
+            this.txtSearchLastName.TabIndex = 3;
+            this.txtSearchLastName.TextChanged += new System.EventHandler(this.txtSearchLastName_TextChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(12, 67);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(44, 13);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Apellido";
+            // 
+            // txtSearchName
+            // 
+            this.txtSearchName.Location = new System.Drawing.Point(15, 36);
+            this.txtSearchName.Name = "txtSearchName";
+            this.txtSearchName.Size = new System.Drawing.Size(79, 20);
+            this.txtSearchName.TabIndex = 1;
+            this.txtSearchName.TextChanged += new System.EventHandler(this.txtSearchName_TextChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(12, 20);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(44, 13);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Nombre";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(483, 449);
+            this.ClientSize = new System.Drawing.Size(701, 449);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnBuscarXCodigo);
             this.Controls.Add(this.btnOrdenApellido);
             this.Controls.Add(this.dgvListado);
@@ -273,6 +426,8 @@ namespace Lab06
             ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,6 +455,19 @@ namespace Lab06
         private System.Windows.Forms.Button btnBuscarXCodigo;
         private System.Windows.Forms.DateTimePicker txtEnrollmentDate;
         private System.Windows.Forms.DateTimePicker txtHireDate;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DateTimePicker dtpSearchDateContrato;
+        private System.Windows.Forms.DateTimePicker dtpSearchDateInscripcion;
+        private System.Windows.Forms.Button btnSearchFacturacion;
+        private System.Windows.Forms.Button btnSearchContrato;
+        private System.Windows.Forms.Button btnSearchLastname;
+        private System.Windows.Forms.Button btnSearchNombre;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtSearchLastName;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtSearchName;
+        private System.Windows.Forms.Label label11;
     }
 }
 
