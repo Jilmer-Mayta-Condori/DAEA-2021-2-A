@@ -160,22 +160,30 @@ namespace Lab06
 
         private void btnSearchNombre_Click(object sender, EventArgs e)
         {
-
+            DataView dv = new DataView(tablePerson);
+            dv.RowFilter = "FirstName = '" + txtSearchName.Text + "'";
+            dgvListado.DataSource = dv;
         }
 
         private void btnSearchLastname_Click(object sender, EventArgs e)
         {
-
+            DataView dv = new DataView(tablePerson);
+            dv.RowFilter = "LastName = '" + txtSearchLastName.Text + "'";
+            dgvListado.DataSource = dv;
         }
 
         private void btnSearchContrato_Click(object sender, EventArgs e)
         {
-
+            DataView dv = new DataView(tablePerson);
+            dv.RowFilter = "HireDate = '" + dtpSearchDateContrato.Text + "'";
+            dgvListado.DataSource = dv;
         }
 
         private void btnSearchFacturacion_Click(object sender, EventArgs e)
         {
-
+            DataView dv = new DataView(tablePerson);
+            dv.RowFilter = "EnrollmentDate = '" + dtpSearchDateInscripcion.Text + "'";
+            dgvListado.DataSource = dv;
         }
 
         private void txtSearchName_TextChanged(object sender, EventArgs e)
@@ -212,7 +220,9 @@ namespace Lab06
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-
+            DataView dv = new DataView(tablePerson);
+            dv.RowFilter = "FirstName = '" + txtSearchName.Text + "'";
+            dgvListado.DataSource = dv;
         }
     }
 }
