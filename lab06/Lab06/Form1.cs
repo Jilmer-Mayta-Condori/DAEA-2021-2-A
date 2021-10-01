@@ -64,8 +64,21 @@ namespace Lab06
             DataRow fila = tablePerson.NewRow();
             fila["FirstName"] = txtFirstName.Text;
             fila["LastName"] = txtLastName.Text;
-            fila["HireDate"] = txtHireDate.Text;
-            fila["EnrollmentDate"] = txtEnrollmentDate.Text;
+            if (txtHireDate.Checked == false)
+            {
+            }
+            else
+            {
+                fila["HireDate"] = txtHireDate.Text;
+            }
+            if (txtEnrollmentDate.Checked == false)
+            {
+            }
+            else
+            {
+                fila["EnrollmentDate"] = txtEnrollmentDate.Text;
+            }
+            
 
             tablePerson.Rows.Add(fila);
 
