@@ -31,10 +31,10 @@ namespace Presentacion
         {
             this.dgvDatos = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnSearchName = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnRecargar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.panel1.SuspendLayout();
@@ -59,12 +59,15 @@ namespace Presentacion
             this.panel1.Size = new System.Drawing.Size(281, 65);
             this.panel1.TabIndex = 1;
             // 
-            // txtName
+            // btnSearchName
             // 
-            this.txtName.Location = new System.Drawing.Point(28, 30);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(116, 20);
-            this.txtName.TabIndex = 0;
+            this.btnSearchName.Location = new System.Drawing.Point(169, 12);
+            this.btnSearchName.Name = "btnSearchName";
+            this.btnSearchName.Size = new System.Drawing.Size(75, 38);
+            this.btnSearchName.TabIndex = 2;
+            this.btnSearchName.Text = "Buscar";
+            this.btnSearchName.UseVisualStyleBackColor = true;
+            this.btnSearchName.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -76,6 +79,13 @@ namespace Presentacion
             this.label1.Text = "Ingresa el Nombre";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(28, 30);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(116, 20);
+            this.txtName.TabIndex = 0;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -84,16 +94,6 @@ namespace Presentacion
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Buscador";
-            // 
-            // btnSearchName
-            // 
-            this.btnSearchName.Location = new System.Drawing.Point(169, 12);
-            this.btnSearchName.Name = "btnSearchName";
-            this.btnSearchName.Size = new System.Drawing.Size(75, 38);
-            this.btnSearchName.TabIndex = 2;
-            this.btnSearchName.Text = "Buscar";
-            this.btnSearchName.UseVisualStyleBackColor = true;
-            this.btnSearchName.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnRecargar
             // 
