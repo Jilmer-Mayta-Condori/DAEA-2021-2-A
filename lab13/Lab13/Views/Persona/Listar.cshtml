@@ -1,9 +1,9 @@
 ﻿
-@model List < Lab13.Models.Persona>
+@model List<Lab13.Models.Persona>
 @{
     ViewBag.Title = "Listar";
 
-    var grid = new WebGrid(source: Model, columnNames: new[] { 
+    var grid = new WebGrid(source: Model, columnNames: new[] {
         "PersonaID","Nombre","Apellido","FechaNac","Direccion","Email"});
 }
 
@@ -17,37 +17,38 @@
         grid.Column(columnName: "FechaNac", header: "FechaNac"),
         grid.Column(columnName: "Direccion", header: "Direccion"),
         grid.Column(columnName: "Email", header: "Email"),
-        grid.Column(header: "Acciones", format:(item) =>
+        grid.Column(header: "Acciones", format: (item) =>
                 Html.ActionLink("Ver", "Mostrar", "Persona",
-                    new { id = item.PersonaID}, null))
+                    new { id = item.PersonaID }, null))
         )
     )
 
+
 @*<h2>Listado de personas</h2>
 
-<table class="table table-striped">
-    <tr>
-        <th>PersonaID</th>
-        <th>Nombre</th>
-        <th>Apellido</th>
-        <th>Fecha Nac.</th>
-        <th>Direccion</th>
-        <th>Email</th>
-        <th>Acciones</th>
-    </tr>
-    @foreach (var persona in Model)
-    {
+    <table class="table table-striped">
         <tr>
-            <td>@persona.PersonaID</td>
-            <td>@persona.Nombre</td>
-            <td>@persona.Apellido</td>
-            <td>@persona.FechaNac</td>
-            <td>@persona.Direccion</td>
-            <td>@persona.Email</td>
-            <td>@Html.ActionLink("Ver","Mostrar","Persona",
-                                new { id = persona.PersonaID }, null)</td>
+            <th>PersonaID</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Fecha Nac.</th>
+            <th>Direccion</th>
+            <th>Email</th>
+            <th>Acciones</th>
         </tr>
-    }
-</table>*@
+        @foreach (var persona in Model)
+        {
+            <tr>
+                <td>@persona.PersonaID</td>
+                <td>@persona.Nombre</td>
+                <td>@persona.Apellido</td>
+                <td>@persona.FechaNac</td>
+                <td>@persona.Direccion</td>
+                <td>@persona.Email</td>
+                <td>@Html.ActionLink("Ver","Mostrar","Persona",
+                                    new { id = persona.PersonaID }, null)</td>
+            </tr>
+        }
+    </table>*@
 
 

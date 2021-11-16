@@ -1,0 +1,56 @@
+﻿@model Lab13.Models.Persona
+
+@{
+    ViewBag.Title = "Buscar";
+}
+
+<h2>Buscar</h2>
+<div style="width:100%; height: auto; padding:2%; border-radius: 1rem; margin-right: auto; margin-left: auto; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; margin-bottom: 4%; border: 1px solid black; display: flex">
+    @using (Html.BeginForm("Buscar", "Persona", FormMethod.Get))
+    {
+        <div style="display: flex; width: 320px">
+            <div style="display: block; margin-right: 5%; margin-left: 5%">
+                <label>Buscar por nombre</label><br /><br />
+                <input type="text" name="nombre" id="nombre" />
+            </div>
+            <div style="margin-top : auto ; margin-right: 10%; border: 1px solid black">
+                <button type="submit" class="btn btn-primary">Buscar</button>
+            </div>
+        </div>
+    }
+    @using (Html.BeginForm("Buscar", "Persona", FormMethod.Get))
+    {
+        <div style="display: flex; width: 320px ">
+            <div style="display: block; margin-right: 5%; margin-left: 5%">
+                <label>Buscar por Apellido</label><br /><br />
+                <input type="text" name="apellido" id="apellido" />
+            </div>
+            <div style="margin-top : auto">
+                <button type="submit" class="btn btn-primary">Buscar</button>
+            </div>
+        </div>
+    }
+</div>
+
+
+
+        <table class="table table-striped">
+            <tr>
+                <th>PersonaID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Fecha Nac.</th>
+                <th>Direccion</th>
+                <th>Email</th>
+                <th>Acciones</th>
+            </tr>
+            <tr>
+                <td>@Html.DisplayFor(model => model.PersonaID)</td>
+                <td>@Html.DisplayFor(model => model.Nombre)</td>
+                <td>@Html.DisplayFor(model => model.Apellido)</td>
+                <td>@Html.DisplayFor(model => model.FechaNac)</td>
+                <td>@Html.DisplayFor(model => model.Direccion)</td>
+                <td>@Html.DisplayFor(model => model.Email)</td>
+
+            </tr>
+        </table>

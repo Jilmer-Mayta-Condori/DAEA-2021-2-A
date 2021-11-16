@@ -85,7 +85,7 @@ namespace Lab13.Controllers
             return View(persona);
         }
 
-        public ActionResult Buscar(string nombre)
+        public ActionResult Buscar(string nombre, string apellido)
         {
             List<Persona> personas = new List<Persona>();
             personas.Add(new Persona
@@ -117,7 +117,7 @@ namespace Lab13.Controllers
             });
 
             Persona persona = (from p in personas
-                               where p.Nombre == nombre || p.Apellido == nombre
+                               where p.Nombre == nombre || p.Apellido == apellido
                                select p).FirstOrDefault();
             return View(persona);
         }
