@@ -1,0 +1,16 @@
+﻿@model List<Lab15.Models.Person>
+
+@{
+    ViewBag.Title = "Index";
+    var grid = new WebGrid(source: Model, columnNames: new[] {
+        "PersonaID","FirstName","LastName","EnrollmentDate","HireDate"
+    });
+}
+
+<h2>Index</h2>
+
+@Html.ActionLink("Reporte", "Reporte", null, new { @class = "btn btn-primary" })
+@Html.ActionLink("Reporte", "Reporte", null, new { @class = "btn btn-primary" })
+
+@grid.GetHtml(tableStyle: "table table-striped")
+
